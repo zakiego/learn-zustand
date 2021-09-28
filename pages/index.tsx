@@ -1,6 +1,5 @@
 import Link from "next/link";
 import useStore from "~/components/hewan";
-import Head from "next/head";
 
 export default function Home() {
 	const serigala = useStore((state) => state.serigala);
@@ -13,7 +12,7 @@ export default function Home() {
 	return (
 		<div className="flex flex-col min-h-screen text-white bg-gray-800">
 			<div className="flex flex-col justify-center m-auto text-center">
-				<div className="px-6 py-6 text-gray-900 bg-gray-200 rounded-2xl">
+				<div className="px-5 py-8 text-gray-900 bg-gray-200 md:px-16 rounded-2xl">
 					<div className="text-3xl ">Selamat datang! 👋</div>
 					<div className="mt-3">
 						<div>Kebun binatang ini memiliki {totalHewan} hewan</div>
@@ -24,21 +23,29 @@ export default function Home() {
 						<div>{serigala} serigala 🐺</div>
 					</div>
 					<button
-						className="px-2 py-1 mt-2 text-xs text-white bg-gray-500 rounded-md"
+						className="px-2 py-1 mt-3 text-xs text-white bg-gray-500 rounded-md hover:bg-gray-700"
 						onClick={kosongkanHewan}
 					>
 						Kosongkan Hewan
 					</button>
+					<div className="mt-5">
+						<a
+							className="text-xs tracking-wide opacity-50 hover:opacity-70 md:text-sm"
+							href="https://github.com/zakiego/learn-zustand"
+						>
+							view repository
+						</a>
+					</div>
 				</div>
 
 				<div className="mt-6 space-y-3">
 					<Link href="/serigala">
-						<a className="flex items-center text-blue-400">
+						<a className="flex items-center text-blue-400 hover:text-blue-600">
 							🐺 Pergi Kandang Serigala <GoIcon />
 						</a>
 					</Link>
 					<Link href="/beruang">
-						<a className="flex items-center text-blue-400">
+						<a className="flex items-center text-blue-400 hover:text-blue-600">
 							🐻 Pergi Kandang Beruang <GoIcon />
 						</a>
 					</Link>
