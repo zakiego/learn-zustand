@@ -12,7 +12,7 @@ export interface Fish {
 }
 
 // Custom storage object
-const storage: StateStorage = {
+export const storage: StateStorage = {
 	getItem: async (name: string): Promise<string | null> => {
 		return (await get(name)) || null;
 	},
@@ -21,7 +21,7 @@ const storage: StateStorage = {
 	},
 };
 
-const useStore = create<Fish>(
+export const useStore = create<Fish>(
 	persist(
 		(set, get) => ({
 			beruang: 0,
