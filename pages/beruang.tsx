@@ -12,14 +12,14 @@ export default function Home() {
 					<h1>Ada {beruang} beruang 🐻</h1>
 					<button
 						onClick={tambahBeruang}
-						className="px-2 py-1 mx-auto mt-4 text-base font-semibold text-gray-700 bg-white rounded-md outline-none"
+						className="px-2 py-1 mx-auto mt-4 text-base font-semibold text-gray-700 transition-all bg-white rounded-md outline-none"
 					>
 						Tambah!
 					</button>
 				</div>
 				<div>
 					<Link href="/">
-						<a className="flex items-center text-base text-blue-400">
+						<a className="flex items-center text-base text-blue-400 hover:text-blue-600">
 							<BackIcon /> Kembali
 						</a>
 					</Link>
